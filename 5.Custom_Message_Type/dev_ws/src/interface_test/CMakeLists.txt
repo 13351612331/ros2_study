@@ -27,7 +27,11 @@ endif()
 
 add_executable(talker src/test_pub.cpp)
 ament_target_dependencies(talker rclcpp tutorial_interfaces)
+
+add_executable(listener src/test_sub.cpp)
+ament_target_dependencies(listener rclcpp tutorial_interfaces)
 install(TARGETS
         talker
+        listener
         DESTINATION lib/${PROJECT_NAME})
 ament_package()
