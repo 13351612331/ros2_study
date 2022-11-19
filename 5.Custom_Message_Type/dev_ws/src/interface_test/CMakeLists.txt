@@ -33,9 +33,13 @@ ament_target_dependencies(listener rclcpp tutorial_interfaces)
 
 add_executable(service src/test_service.cpp)
 ament_target_dependencies(service rclcpp tutorial_interfaces)
+
+add_executable(client src/test_client.cpp)
+ament_target_dependencies(client rclcpp tutorial_interfaces)
 install(TARGETS
         talker
         listener
         service
+        client
         DESTINATION lib/${PROJECT_NAME})
 ament_package()
