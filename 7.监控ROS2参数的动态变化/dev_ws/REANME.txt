@@ -1,0 +1,2 @@
+节点成功运行后，为了测试参数监控的功能，我们可以故意通过命令行改变参数值，看下是否会触发回调函数：
+	ros2 param set node_with_parameters an_int_param 43
